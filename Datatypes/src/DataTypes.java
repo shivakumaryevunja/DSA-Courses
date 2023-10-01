@@ -4,6 +4,6 @@ public class DataTypes {
         float y = 44.87665f;
         double value = 23.784778;
         String name = "Joy";
-        System.out.println(x+y+value+);
+        System.out.println(x+y+value);
     }
 }
