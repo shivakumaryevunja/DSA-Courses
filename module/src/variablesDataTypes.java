@@ -1,3 +1,4 @@
+//The place value is the position of each digit in a 4 digit number.
 import java.util.Scanner;
 public class variablesDataTypes {
     public static void main(String[] args){
