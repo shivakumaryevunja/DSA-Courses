@@ -1,9 +1,50 @@
-1. Covert cm to foot 
-ans:    int cm = 165;
+1. Write a program to Covert cm to foot 
+ans:    public class convertion {
+        public static void main(String[] args){
+        int cm = 165;
         double foot;
         foot = (double) cm/30.48;
-        System.out.print(cm+" cm is equal to "+foot+" foot");
+        System.out.printf("%d cm is equal to %5.3f foot",cm,foot); //here %5.3f reduces the decimal point to 3 digits
+        }
+   }
 
-2. Write a program to print int, double, char
-ans:   int a = 43;
+2. Write a program to get the Body Mass Index of a person
+ans:    public class bmiCalculator {
+        public static void main(String[] args){
+        int cm = 165;
+        int kg = 70;
+        double BDM = (((double)kg/(double)(cm*cm)))*10000;
+        System.out.println("Normal Body mass Index: 18.5 and 24.9");
+        System.out.printf("Body mass Index of the given height and weight is: %5.2f",BDM);
+        }
+  }
+
+3.  Write a program to add, multiply, divide and find the remainder od two integer number
+ans:    import java.util.Scanner;
+        public class calculator {
+        public static void main(String[] args){
+
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        System.out.println("the addition of the a and b is: "+(a+b));
+        System.out.println("the product of the a and b is: "+(a*b));
+        System.out.println("the remainder of the a and b is: "+(a%b));
+        System.out.println("the division of the a and b is: "+((double)a/(double)b));
+    }
+}
+
+4. Write a program to check a number even using boolean variable
+ans: public class evenCheck {
+     public static void main(String[] args) {
+        
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        boolean value; 
+        value = (a > 0);
+        System.out.println(a + " is Even: " + value);
+    }
+}
+
+5. 
        
