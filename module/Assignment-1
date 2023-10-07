@@ -1,0 +1,9 @@
+1. Covert cm to foot 
+ans:    int cm = 165;
+        double foot;
+        foot = (double) cm/30.48;
+        System.out.print(cm+" cm is equal to "+foot+" foot");
+
+2. Write a program to print int, double, char
+ans:   int a = 43;
+       
