@@ -72,5 +72,17 @@ ans: Instance variable: the variable which can be used by all the methods within
      Local variable: the variable which is declared within a method, function are local variable, they can be used only within the method which they are declared.
 
 9.What is the famous quote in java
-ans: WORA (Write 
+ans: WORA (Write Once and Run Anywhere)
+
+10.What are the default values of int, float, String, double, char, boolean instances in java
+ans:    Data Type	Default Value (for fields)
+        byte	        0
+        short	        0
+        int	        0
+        long	        0L
+        float	        0.0f
+        double	        0.0d
+        char	        '\u0000'
+        String   	null
+        boolean	        false
        
