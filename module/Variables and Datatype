@@ -46,5 +46,31 @@ ans: public class evenCheck {
     }
 }
 
-5. 
+5. Write a program to check wether the seat is available or not in a theatre using array 
+ans:    import java.util.Scanner;
+        public class seatCheck {
+    
+        public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter if seat is 1 - if available and 0 - if not available");
+        int seat = sc.nextInt();
+        String[] aval = {"Not available","Available"};
+        System.out.println("the seat is: "+aval[seat]);
+    }
+
+}
+
+6.Why is Java not a pure object oriented language
+ans: mainly because it supports primitive data types
+
+7. What is JIT compiler
+ans: JIT (Just in time), it is used to improving the performance during the run time,
+     it can run similar type of funtionality at the same time as it reduces the compilation time.
+
+8.What is instance variable and Local variable
+ans: Instance variable: the variable which can be used by all the methods within the class, this is declared outside the method and inside the class
+     Local variable: the variable which is declared within a method, function are local variable, they can be used only within the method which they are declared.
+
+9.What is the famous quote in java
+ans: WORA (Write 
        
