@@ -108,3 +108,38 @@ public class random {
 		System.out.println("x = "+swap.x+" y = "+swap.y);
 	}  
 }
+
+6.What is the difference between for and while loop
+ans: The for loop is used when the number of iterations is known and
+     the while loop is used when the number of iterations is unknown.
+
+7.can a single try block have multiple catch block
+ans: Yes, but there are certain hierarachy for the catch blocks to be followed.
+
+8. what is the difference between static variable and static methods
+ans: Static variables: the variables which are declared indside the class and outside the instance is 
+                       statuc variable and this variable can be called in any instance inside the class using the class object
+     Static Method: the methods that belongs to the class rather than the instance class are called static method.
+
+9.What will be the output of following program ?
+ public class temp
+{
+    public static void main(String args[])
+    {
+        int y=4;    
+        if(y)
+            System.out.println("working fine");
+        else
+            System.out.println("not working");
+    }
+}
+ans: the above code will give error because the integer value cannot be given within the
+     conditional expression, the value should be true or false that is only boolean values.
+
+10. can we use double in the switch case?
+ans: No, we can only use int, String, and enum
+     enum: An enum is a special "class" that represents a group of constants
+           To create an enum, use the enum keyword (instead of class or interface),
+           and separate the constants with a comma. Note that they should be in uppercase letters
+
+    
