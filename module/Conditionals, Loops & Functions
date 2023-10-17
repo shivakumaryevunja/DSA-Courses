@@ -46,3 +46,65 @@ ans: public static void main(String[] args) {
        }
         System.out.println("sum of first n numbers is: "+factorial);
     }
+4. Write a program to create a calculator using a function calci in which you send three parameters that is int a, b and String +,-,/,*
+ans: public class Calculator {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the two value to calculate: ");
+		int a =sc.nextInt();
+		int b =sc.nextInt();
+		System.out.println("1 - for addition: \n2 - for substraction: \n3 - for multiplication: \n4 - for division: ");
+		int option =sc.nextInt();
+		
+		System.out.println(calci(a, b, option));
+
+	}
+
+	public static double calci(int a, int b, int option) {
+		double result = 0;
+		switch (option) {
+		case 1:
+			result = (double) a +(double) b;
+			break;
+		case 2:
+			result = (double) a -(double) b;
+			break;
+		case 3:
+			result = (double) a *(double) b;
+			break;
+		case 4:
+			result = (double) a /(double) b;
+			break;
+		default:
+			System.out.println("Enter valid option");
+			
+		}
+		return result;
+	}
+    }
+
+5. Write a program to swap number by using funtion and creating object in class
+ans: import java.util.Scanner;
+public class random {
+	int x;
+	int y;
+
+	public void swapNum(random n1)  
+	{
+		int temp =0;
+		temp = n1.x;
+		n1.x = n1.y;
+		n1.y = temp;
+		
+	}  
+	public static void main(String args[])   
+	{
+		Scanner in = new Scanner(System.in);
+		//creating object of the class
+		random swap = new random();
+		swap.x = in.nextInt(); //initializing variable using object
+		swap.y = in.nextInt();
+		swap.swapNum(swap);
+		System.out.println("x = "+swap.x+" y = "+swap.y);
+	}  
+}
