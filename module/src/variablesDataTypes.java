@@ -1,3 +1,13 @@
+/*Variables and Datatype :
+
+- Primitive Datatype: int,String,char,double,long,short,boolean,byte
+- what is the famous java slogan?
+   WORA: Write Once and Run Anywhere
+- Precedence and associativity in Java:
+   The brackets have to be solved first,then Division, Multiplication,
+   Addition, and at the end Subtraction.
+- Precedence rule in Logical Operator:
+   NOT -> AND -> OR */
 //The place value is the position of each digit in a 4 digit number.
 import java.util.Scanner;
 public class variablesDataTypes {

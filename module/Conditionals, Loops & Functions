@@ -1,0 +1,145 @@
+1. Write a program create a vending machine which gives 3 options of drinks
+ans:  import java.util.Scanner;
+      public class vendingMachine {
+          public static void main(String[] args) {
+              Scanner sc = new Scanner(System.in);
+              System.out.println("Enter the following options: \n1 - Coffee\n2 - Tea\n3 - Milk");
+              int option = sc.nextInt();
+      
+              switch(option){
+                  case 1:
+                      System.out.println("Deliver Coffee");
+                      break;
+                  case 2:
+                      System.out.println("Deliver Tea");
+                      break;
+                  case 3:
+                      System.out.println("Deliver Milk");
+                      break;
+                  default:
+                      System.out.println("Enter valid option");
+                      break;
+              }
+          }
+      }
+
+2. Write a program to sum first n even numbers using a while loop.
+ans:  public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int i=1;
+        int sum =0;
+        while(i<=n){
+            sum = sum+i;
+            i++;
+        }
+        System.out.println("sum of first n numbers is: "+sum);
+    }
+
+3.Write a program to find the factorial of a given number using for loops.
+ans: public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int factorial =1;
+       for(int i=0;i<n;i++){
+           factorial = factorial*(n-i);
+       }
+        System.out.println("sum of first n numbers is: "+factorial);
+    }
+4. Write a program to create a calculator using a function calci in which you send three parameters that is int a, b and String +,-,/,*
+ans: public class Calculator {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the two value to calculate: ");
+		int a =sc.nextInt();
+		int b =sc.nextInt();
+		System.out.println("1 - for addition: \n2 - for substraction: \n3 - for multiplication: \n4 - for division: ");
+		int option =sc.nextInt();
+		
+		System.out.println(calci(a, b, option));
+
+	}
+
+	public static double calci(int a, int b, int option) {
+		double result = 0;
+		switch (option) {
+		case 1:
+			result = (double) a +(double) b;
+			break;
+		case 2:
+			result = (double) a -(double) b;
+			break;
+		case 3:
+			result = (double) a *(double) b;
+			break;
+		case 4:
+			result = (double) a /(double) b;
+			break;
+		default:
+			System.out.println("Enter valid option");
+			
+		}
+		return result;
+	}
+    }
+
+5. Write a program to swap number by using funtion and creating object in class
+ans: import java.util.Scanner;
+public class random {
+	int x;
+	int y;
+
+	public void swapNum(random n1)  
+	{
+		int temp =0;
+		temp = n1.x;
+		n1.x = n1.y;
+		n1.y = temp;
+		
+	}  
+	public static void main(String args[])   
+	{
+		Scanner in = new Scanner(System.in);
+		//creating object of the class
+		random swap = new random();
+		swap.x = in.nextInt(); //initializing variable using object
+		swap.y = in.nextInt();
+		swap.swapNum(swap);
+		System.out.println("x = "+swap.x+" y = "+swap.y);
+	}  
+}
+
+6.What is the difference between for and while loop
+ans: The for loop is used when the number of iterations is known and
+     the while loop is used when the number of iterations is unknown.
+
+7.can a single try block have multiple catch block
+ans: Yes, but there are certain hierarachy for the catch blocks to be followed.
+
+8. what is the difference between static variable and static methods
+ans: Static variables: the variables which are declared indside the class and outside the instance is 
+                       statuc variable and this variable can be called in any instance inside the class using the class object
+     Static Method: the methods that belongs to the class rather than the instance class are called static method.
+
+9.What will be the output of following program ?
+ public class temp
+{
+    public static void main(String args[])
+    {
+        int y=4;    
+        if(y)
+            System.out.println("working fine");
+        else
+            System.out.println("not working");
+    }
+}
+ans: the above code will give error because the integer value cannot be given within the
+     conditional expression, the value should be true or false that is only boolean values.
+
+10. can we use double in the switch case?
+ans: No, we can only use int, String, and enum
+     enum: An enum is a special "class" that represents a group of constants
+           To create an enum, use the enum keyword (instead of class or interface),
+           and separate the constants with a comma. Note that they should be in uppercase letters
+
+    
