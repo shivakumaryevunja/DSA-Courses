@@ -27,4 +27,10 @@ ans: public class Shape {
     
     }
 
-2. 
+2. What are the rules for constructor and type of constructor
+ans:  The constructor and class must have same name.
+      You cannot define an explicit value to a constructor.
+      A constructor cannot be any of these: static, synchronized, abstract, or final.
+      types of constructor:
+      - parameterized constructor
+      - default constructor
