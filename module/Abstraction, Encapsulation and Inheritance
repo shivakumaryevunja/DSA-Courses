@@ -1,0 +1,30 @@
+1. Write a Java program to create an abstract class Shape with abstract methods calculateArea() and calculatePerimeter(). 
+   Create subclasses Rectangle that extend the Shape class and implement the respective methods to calculate the
+    area and perimeter of the shape.
+ans: public class Shape {
+        public static void main(String[] args) {
+            Rectangle r1 = new Rectangle(4,8);
+            r1.calculatePerimeter();
+            System.out.println("Area of the Rectangle is: "+r1.calculateArea());
+        }
+    }
+    
+    class Rectangle{
+        public int length;
+        public int breadth;
+        public Rectangle(int l, int b){
+            this.length = l;
+            this.breadth = b;
+        }
+        public void calculatePerimeter(){
+            int res = 2*(length+breadth);
+            System.out.println("Perimeter of the Rectangle is: "+res);
+        }
+        public int calculateArea(){
+            int res = length*breadth;
+            return res;
+        }
+    
+    }
+
+2. 
