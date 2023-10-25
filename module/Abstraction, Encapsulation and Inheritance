@@ -1,31 +1,50 @@
 1. Write a Java program to create an abstract class Shape with abstract methods calculateArea() and calculatePerimeter(). 
    Create subclasses Rectangle that extend the Shape class and implement the respective methods to calculate the
     area and perimeter of the shape.
-ans: public class Shape {
+ans: public class Main {
         public static void main(String[] args) {
-            Rectangle r1 = new Rectangle(4,8);
-            r1.calculatePerimeter();
-            System.out.println("Area of the Rectangle is: "+r1.calculateArea());
-        }
-    }
-    
-    class Rectangle{
-        public int length;
-        public int breadth;
-        public Rectangle(int l, int b){
-            this.length = l;
-            this.breadth = b;
-        }
-        public void calculatePerimeter(){
-            int res = 2*(length+breadth);
-            System.out.println("Perimeter of the Rectangle is: "+res);
-        }
-        public int calculateArea(){
-            int res = length*breadth;
-            return res;
-        }
-    
-    }
+              Circle c1 = new Circle(12);
+              System.out.println("Area of Circle: "+c1.calculateArea()+"\nPerimeter of Circle: "+c1.calculatePerimeter());
+              Rectangle r1 = new Rectangle(9,6);
+              System.out.println("Area of Rectangle: "+r1.calculateArea()+"\nPerimeter of Rectangle: "+r1.calculatePerimeter());
+          }
+      }
+      abstract class Shape{
+          abstract double calculateArea();
+          abstract double calculatePerimeter();
+      }
+      class Circle extends Shape{
+          double radius;
+          Circle(double radius){
+              this.radius = radius;
+          }
+          @Override
+          double calculateArea() {
+              return 3.144*radius*radius;
+          }
+      
+          @Override
+          double calculatePerimeter() {
+              return 2*3.144*radius;
+          }
+      }
+      class Rectangle extends Shape{
+          double length;
+          double width;
+          Rectangle(double l,double w){
+              this.width = w;
+              this.length = l;
+          }
+          @Override
+          double calculateArea() {
+              return length*width;
+          }
+      
+          @Override
+          double calculatePerimeter() {
+              return 2*(length+width);
+          }
+      }
 
 2. What are the rules for constructor and type of constructor
 ans:  The constructor and class must have same name.
@@ -34,3 +53,50 @@ ans:  The constructor and class must have same name.
       types of constructor:
       - parameterized constructor
       - default constructor
+
+3. why java is not pure object oriented language
+ans: because java has primitive data types, static keyword and wrapper class
+
+4. Write a Java program to create a class called Person with private instance variables name, age. and country.
+   Provide public getter and setter methods to access and modify these variables.
+ans: public class Encapsulation {
+         public static void main(String[] args){
+              Person p1 = new Person("Babu",24,"India");
+              p1.display();
+          }
+      }
+      class Person{
+          private String name;
+          private int age;
+          private String country;
+          public Person(String name, int age, String country) {
+              this.name = name;
+              this.age = age;
+              this.country = country;
+          }
+          public String getName() {
+              return name;
+          }
+          public void setName(String name) {
+              this.name = name;
+          }
+          public void setAge(int age) {
+              this.age = age;
+          }
+          public String getCountry() {
+              return country;
+          }
+          public void setCountry(String country) {
+              this.country = country;
+          }
+      
+          public int getAge() {
+              return age;
+          }
+          void display(){
+              System.out.println("name: "+this.getName()+"\nAge: "+this.getAge()+"\nCountry: "+this.getCountry());
+          }
+      }
+
+5. 
+
