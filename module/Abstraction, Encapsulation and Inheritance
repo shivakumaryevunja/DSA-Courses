@@ -98,5 +98,79 @@ ans: public class Encapsulation {
           }
       }
 
-5. 
+5. Write a Java program to create a class called Vehicle with a method called drive().
+      Create a subclass called Car that overrides the drive() method to print "Repairing a car".
+ans: class Vehicle {
+   	public void makeSound() {
+   		System.out.println("the vehicle makes Sound");
+   	}
+      	
+      }
+      
+      class Car extends Vehicle{
+      	public void makeSound() {
+      		System.out.println("the Car is making Sound");
+      	}
+      }
+      
+      public class Main{
+      	public static void main(String[] args) {
+      		Vehicle v1 = new Vehicle();
+      		v1.makeSound();
+      		Car c1 = new Car();
+      		c1.makeSound();
+      	}
+      }
+6.What is the advantage of Encapsulation?
+ans:The encapsulated code is more flexible and easy to change with new requirements.
+    It prevents the other classes to access the private fields.
+    It keeps the data and codes safe from external inheritance. Thus, Encapsulation helps to achieve security.
+    It improves the maintainability of the application.
+
+7.Write a Java program to create a class called Shape with a method called getArea().
+  Create a subclass called Rectangle that overrides the getArea() method to calculate the area of a rectangle.
+ans: class Shape1 {
+     public double getArea() {
+      		return 0;
+      	}
+      }
+      
+      class Circle extends Shape1{
+   	double radius;
+   	private double pi = 3.144;
+   	Circle(double r){
+   		this.radius = r;
+   	}
+   	public double getArea() {
+   		double result = 2*pi*this.radius;
+   		return result;
+   	}
+      }
+      
+      public class Main{
+      	public static void main(String[] args) {
+      		Circle c1 = new Circle(12);
+      		System.out.println("Area od circle: "+c1.getArea());
+      	}
+   }
+
+8.How can we acheive encapsulation in java
+ans:- we can declare the variable as private in the parent class
+    - create public getter and setter methods to manipulate the values of variables.
+
+9.What is Is-A Relationship in Java?
+ans: Is-A relationship represents inheritance in java.
+     it is implemented using the keyword extends
+     example: class A {
+                 // statements
+               }
+               class A extends Object {
+                 // statements
+               }
+
+10.Why should We Use Inheritance in Java?
+ans: We can reuse the code from the parent class.
+     Using inheritance, we can increase features of class or method by overriding.
+     Inheritance is used to use the existing features of class.
+     It is used to achieve runtime polymorphism i.e method overriding.
 
