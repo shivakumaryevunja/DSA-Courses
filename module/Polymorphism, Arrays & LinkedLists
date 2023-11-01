@@ -1,3 +1,61 @@
 1.write the 2 types of polymorphism
 ans: run time polymorphism 
      compile time polymorphism
+
+2.Write a Java program to create a base class Animal (Animal Family) with a method called Sound(). Create two subclasses Bird and Cat.
+  Override the Sound() method in each subclass to make a specific sound for each animal.
+ans: public class Exercise1 {
+    public static void main(String args[]) {
+        Animal cat = new Cat();
+        cat.sound();
+             Animal bird = new Bird();
+             bird.sound();
+     
+         }
+     }
+     
+     class Animal{
+         void sound(){
+             System.out.println("woo woo");
+         }
+     }
+     class Bird extends Animal{
+         void sound(){
+             System.out.println("chirp chirp..");
+         }
+     }
+     class Cat extends Animal{
+         void sound(){
+             System.out.println("Mew Mew..");
+         }
+     }
+
+3.Write a Java program to create a class Vehicle with a method called speedUp(). Create two subclasses Car and Bicycle. 
+  Override the speedUp() method in each subclass to increase the vehicle's speed differently.
+ans: public class Exercise1 {
+    public static void main(String args[]) {
+        Vehicle car = new Car();
+             car.sound();
+             Vehicle cycle = new Bicycle();
+             cycle.sound();
+     
+         }
+     }
+     
+     class Vehicle{
+         void sound(){
+             System.out.println("Speeding Up");
+         }
+     }
+     class Car extends Vehicle{
+         private int speed = 60;
+         void sound(){
+             System.out.println("the car is at a Speed of: "+this.speed+"km/hr");
+         }
+     }
+     class Bicycle extends Vehicle{
+         private int speed = 20;
+         void sound(){
+             System.out.println("the bicycle is at a speed of: "+this.speed+"km/hr");
+         }
+     }
