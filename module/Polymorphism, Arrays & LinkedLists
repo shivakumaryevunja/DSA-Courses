@@ -59,3 +59,35 @@ ans: public class Exercise1 {
              System.out.println("the bicycle is at a speed of: "+this.speed+"km/hr");
          }
      }
+4. Write a Java program to create an interface Flyable with a method called fly_obj().
+   Create three classes Spacecraft, Airplane, and Helicopter that implement the Flyable interface.
+   Implement the fly_obj() method for each of the three classes.
+ans: public class Exercise2 {
+    public static void main(String[] args){
+         Flyable[] plane = {new Helicopter(),new Aeroplane(), new Spaceship()};
+         for(Flyable i:plane){
+             i.fly_obj();
+              }
+     
+         }
+     }
+     interface Flyable{
+         void fly_obj();
+     }
+     
+     class Aeroplane implements Flyable{
+         public void fly_obj(){
+             System.out.println("Aeroplane is flying");
+         }
+     }
+     class Spaceship implements Flyable{
+         public void fly_obj(){
+             System.out.println("Spaceship is flying");
+         }
+     }
+     class Helicopter implements Flyable{
+         public void fly_obj(){
+             System.out.println("Helicopter is flying");
+         }
+     }
+
