@@ -167,7 +167,7 @@ ans: The main difference is in performance:
      - to add or substract the LinkedList is faster that ArrayList.
 
 10. What are the methods in LinkedList
-ans  ### Methods and Their Descriptions:
+ans  Methods and Their Descriptions:
      1. `addFirst()`: Adds an item to the beginning of the list.
      2. `addLast()`: Adds an item to the end of the list.
      3. `removeFirst()`: Removes an item from the beginning of the list.
