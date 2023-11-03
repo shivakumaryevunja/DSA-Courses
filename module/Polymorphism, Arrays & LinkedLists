@@ -91,3 +91,86 @@ ans: public class Exercise2 {
          }
      }
 
+5.Write a Java program to create an array list, add some colors (strings) and print out the collection.
+ans: import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+        ArrayList<String> colour = new ArrayList<String>();
+        colour.add("Red");
+        colour.add("Blue");
+        colour.add("Green");
+        colour.add("Orange");
+        colour.add("White");
+        printColour(colour);
+  }
+     
+   static void printColour(ArrayList<String> colour) {
+             for(String name: colour){
+                 System.out.println(name);
+             }
+   }
+}
+
+6. Write a Java program to insert an element into the array list at the first position.
+ans: import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+        List<String> country = new ArrayList<String>();
+        country.add("India");
+        country.add("UK");
+        country.add("London");
+        country.add("Japan");
+        country.add(0,"Korea");
+        printColour(country);
+      }
+     
+         static void printColour(List<String> colour) {
+             for(String name: colour){
+                 System.out.println(name);
+             }
+         }
+     }
+
+7. Write a Java program to append the specified element to the end of a linked list.
+ans: import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+        LinkedList<Integer> marks = new LinkedList<Integer>();
+        marks.add(83);
+        marks.add(63);
+        marks.add(91);
+        marks.add(76);
+        System.out.println(marks);
+        marks.addLast(99);
+        printMarks(marks);
+    }
+
+    static void printMarks(LinkedList<Integer> marks) {
+        for(Integer name: marks){
+            System.out.println(name);
+        }
+    }
+}
+
+8.Difference between Array vs ArrayList in Java
+ans: - Array can store primitive data types and objects in case of ArrayList only objects
+     - Array is static nature and ArrayList is dynamic in nature
+     - Once created you can not change the size of Array but ArrayList can re-size itself when needed
+
+9.When to use ArrayList and LinkedList in Java?
+ans: The main difference is in performance:
+     - to retrieve elements from any specific index ArrayList is faster compared to 
+       LinkedList.
+     - to add or substract the LinkedList is faster that ArrayList.
+
+10. What are the methods in LinkedList
+ans  ### Methods and Their Descriptions:
+     1. `addFirst()`: Adds an item to the beginning of the list.
+     2. `addLast()`: Adds an item to the end of the list.
+     3. `removeFirst()`: Removes an item from the beginning of the list.
+     4. `removeLast()`: Removes an item from the end of the list.
+     5. `getFirst()`: Retrieves the item at the beginning of the list.
+     6. `getLast()`: Retrieves the item at the end of the list.
