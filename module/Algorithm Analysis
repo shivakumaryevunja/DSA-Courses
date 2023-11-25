@@ -1,1 +1,66 @@
+1.  Find the complexity of the below program: 
+static void function(int n)
+{
+	int count = 0;
+	for (int i = n / 2; i <= n; i++)
+		for (int j = 1; j <= n; j = 2 * j)
+			for (int k = 1; k <= n; k = k * 2)
+				count++;
+}
+ans: T(n) = O(nlog^2n)
+
+2. time complexity of below code
+int a = 0, i = N;
+while (i > 0) {
+    a += i;
+    i /= 2;
+}
+
+ans: O(logn)
+
+3.Java Program for Tower of Hanoi
+ans: public class Question1 {
+	public static void towerOfHanoi(int n,String src,String Dest, String helper) {
+		if(n==1) {
+			System.out.println("Transfer disk "+n+" from "+src+" to "+Dest);
+			return;
+		}
+		
+		towerOfHanoi(n-1,src,helper,Dest);
+		System.out.println("Transfer disk "+n+" from "+src+" to "+Dest);
+		towerOfHanoi(n-1,helper,Dest,src);
+		
+	}
+
+	public static void main(String[] args) {
+		int n=3;
+		Question1.towerOfHanoi(n, "S", "H","D");
+
+	}
+
+}
+
+4. Write an algorithm to swap two given numbers in Java without using a temporary variable.
+ans: public class sum {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number");
+        int a = sc.nextInt();
+        System.out.println("Enter the second number");
+        int b = sc.nextInt();
+
+        a = a-b;
+        b = a+b;
+        a = b-a;
+        System.out.println("a = "+a+" b = "+b);
+
+        //using xor we can do
+        a = a^b;
+        b = a^b;
+        a = a^b;
+        System.out.println("XOR method: "+"a = "+a+" b = "+b);
+    }
+}
+
+5.
 
