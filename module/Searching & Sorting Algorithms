@@ -1,1 +1,33 @@
+Linear Search:
+1. Write a program to search a certain name is the given array using linear search
+ans: import java.util.Scanner;
+    public class LinearSearch {
+    
+    	public static void main(String[] args) {
+    		Scanner sc = new Scanner(System.in);
+    		String[] names = {"Aryan", "shiva", "Aman", "lal", "Aaron", "James"};
+    		System.out.print("Enter the name to search: ");
+    		String name = sc.next().toLowerCase();
+    		if(linearSearch(names,name)>0) {
+    			System.out.print(name+ " is present at position: "+linearSearch(names,name));
+    		}else {
+    			System.out.println(name+" is not present in the given array");
+    		}
+    		
+    
+    	}
+    	
+    	public static int linearSearch(String[] arr,String name) {
+    		
+    		for(int i=0;i<arr.length;i++) {
+    			if(arr[i].equalsIgnoreCase(name)) {
+    				return i+1;
+    			}
+    		}
+    		return -1;
+    	}
+    
+    }
 
+Binary Search:
+2. Write
