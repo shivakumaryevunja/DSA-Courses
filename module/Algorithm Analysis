@@ -91,3 +91,71 @@ ans: public class Recursion {
 
 time complexity = O(n) of the above code
 
+6. Write a program for array rotation with d index rotation using O(d) space complexity
+ans: import java.util.Arrays;
+
+public class arrayRotation {
+    public static void main(String[] args){
+        int[]arr = {1,2,3,4,5};
+        System.out.println(Arrays.toString(arr));
+        leftToRight(arr,arr.length,6);
+    }
+
+    public static void leftToRight(int[] arr,int n,int d){
+        if(d>n){
+            System.out.println("d cannot be greater than array length");
+            return;
+        }
+        int[] temp = new int[d];
+        //copying d value to temp array
+         for(int i=0;i<d;i++){
+            temp[i] = arr[i];
+        }
+        //moving the remaining value 0 - (n-d)
+        for(int i=d;i<n;i++){
+            arr[i-d] = arr[i];
+        }
+
+        for(int i=0;i<d;i++){
+            arr[i+n-d] = temp[i];
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
+
+- the above code has time complexity - O(n)
+                     space complexity - O(d)  d - no of rotation
+
+7.Write a program for array rotation with d index rotation using O(1) space complexity
+ans:    import java.util.Arrays;
+	import java.util.Scanner;
+	
+	public class arrayRotation2 {
+	    public static void main(String[] args){
+	        Scanner sc = new Scanner(System.in);
+	        int[]arr = {1,2,3,4,5};
+	        System.out.print("Enter the no of rotation: ");
+	        int d = sc.nextInt();
+	        System.out.print("Initial array: ");
+	        System.out.println(Arrays.toString(arr));
+	        leftToRight(arr,d);
+	        System.out.print("Final array: ");
+	        System.out.println(Arrays.toString(arr));
+	    }
+	    public static void leftToRight(int[]arr,int d){
+	        for(int i=0;i<d;i++){
+	            leftRotateByOne(arr,arr.length);
+	        }
+	    }
+	    public static void leftRotateByOne(int[]arr,int n){
+	        int temp,i;
+	        temp = arr[0];
+	        for(i=0;i<n-1;i++){
+	            arr[i] = arr[i+1];
+	        }
+	        arr[i] = temp;
+	    }
+	}
+
+above code has time complexity - O(n*d)
+               space complexity - O(1)
