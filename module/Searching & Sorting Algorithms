@@ -64,3 +64,50 @@ ans: import java.util.Scanner;
 - Time compexity for binary = O(logn) 
 - Binary search can be done only on sorted arrays
 
+
+3.Write a Quick sort with first element as the pivot 
+ans: import java.util.Arrays;
+
+     public class Quicksort {
+    
+    	public static void main(String[] args) {
+    		int[]arr = {10, 7, 8, 9, 1, 5};
+    		System.out.println(Arrays.toString(arr));
+    		quickSort(arr,0,arr.length-1);
+    		System.out.println(Arrays.toString(arr));
+    
+    	}
+    	public static void quickSort(int[] arr,int start,int end) {
+    		if(start<end) {
+    			int p = sort(arr,start,end);
+    			quickSort(arr,start,p-1);  
+    			quickSort(arr,p+1,end);
+    		}
+    	}
+    	
+    	public static int sort(int[]arr,int start,int end) {
+    		int pivot = arr[start];     //pivot value is first element
+    		int p = end;      // partition index start from end of the array
+    		for(int i=end;i>start;i--) {      //traverse from end and check compare with the pivot value
+    			if(arr[i]>pivot) {
+    				int temp = arr[i];
+    				arr[i] = arr[p];
+    				arr[p--] = temp;
+    			}
+    		}
+    		int temp = arr[p];
+    		arr[p] = arr[start];
+    		arr[start] = temp;      // here the pivot value and pth index value is swapped
+    		
+    		return p;
+    	}
+    
+    }
+
+Time Complexity:
+    Average Case: O(N * logN), where N is the length of the array.
+    Best Case: O(N * logN)
+    Worst Case: O(N2)
+Space complexity - O(1)
+
+
