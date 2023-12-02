@@ -34,7 +34,7 @@ ans: public class Question1 {
 
 	public static void main(String[] args) {
 		int n=3;
-		Question1.towerOfHanoi(n, "S", "H","D");
+		Question1.towerOfHanoi(n, "S", "D","H"); //S-Source,D-destination,H-helper
 
 	}
 
