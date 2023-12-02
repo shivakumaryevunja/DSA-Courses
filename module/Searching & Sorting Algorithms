@@ -110,4 +110,116 @@ Time Complexity:
     Worst Case: O(N2)
 Space complexity - O(1)
 
+4. Write a quick sort algorithm using Random value as pivot
+ans: import java.util.Arrays;
+        import java.util.Random;
+        
+        public class QuicksortRandom {
+            public static void main(String[] args){
+                int[] arr = {9,3,6,2,7,1,5,8,4,10};
+                System.out.println(Arrays.toString(arr));
+        
+                quickSort(arr,0,arr.length-1);
+                for(int a:arr){
+                    System.out.print(a+" ");
+                }
+        
+            }
+            public static void quickSort(int[]arr,int start,int end){
+                if(start<end) {
+                    int p = partition(arr, start, end);
+        
+                    quickSort(arr, start, p - 1);
+                    quickSort(arr, p + 1, end);
+        
+                }
+            }
+            public static void random(int[]arr,int start,int end){  //this function assigns a random value to end value 
+                Random rand = new Random();
+                int pivot = rand.nextInt(end-start)+start;
+                int temp = arr[end];
+                arr[end]= arr[pivot];
+                arr[pivot] = temp;
+            }
+            public static int partition(int[]arr,int start,int end){
+                random(arr,start,end);
+                int pivot = arr[end];
+                int p=start;
+                for(int i=start;i<end;i++){
+                    if(arr[i]<pivot){
+                        int temp = arr[i];
+                        arr[i] = arr[p];
+                        arr[p++] = temp;
+                    }
+                }
+                int temp = arr[end];
+                arr[end] = arr[p];
+                arr[p] = temp;
+                return p;
+            }
+        }
+
+    Time Complexity -  O(n*n)
+    Space Complexity -  O(n) 
+
+5. Write prgram to count the Inversion count in Array using Merge Sort
+ans: import java.util.Arrays;
+
+    public class MergeSort {
+        public static void main(String[] args){
+            int[] arr = { 1, 20, 6, 4, 5 };
+            System.out.println(Arrays.toString(arr));
+    
+            int count = mergeSort(arr,0,arr.length-1);
+            System.out.println("Inversions = "+count);
+            for(int a:arr){
+                System.out.print(a+" ");
+            }
+    
+        }
+    
+        public static int mergeSort(int[]arr,int start,int end){
+            int count = 0;
+            if(start<end){
+                int mid = start+(end-start)/2;
+                count = mergeSort(arr,start,mid);
+                count = mergeSort(arr,mid+1,end);
+    
+                count = merge(arr,start,mid,end);
+            }
+            return count;
+        }
+        public static int merge(int[]arr,int start,int mid,int end){
+            int[] merged = new int[end-start+1];
+            int l = start;
+            int r = mid+1;
+            int k=0,swap=0;
+    
+            while(l<=mid && r<=end){
+                if(arr[l]<=arr[r]){
+                    merged[k++] = arr[l++];
+                    swap++;
+                }else{
+                    merged[k++] = arr[r++];
+                    swap++;
+                }
+            }
+    
+            while(l<=mid){
+                merged[k++] = arr[l++];
+                swap++;
+            }
+            while(r<=end){
+                merged[k++] = arr[r++];
+                swap++;
+            }
+            for(int i=0,j=start;i<merged.length;i++,j++){
+                arr[j] = merged[i];
+            }
+            return swap;
+        }
+    }
+Time Complexity - O(nlogn)  (algorithm is divide and conquer so the time complexity)
+space cpmplexity - O(n) (because of temp array)
+
 
