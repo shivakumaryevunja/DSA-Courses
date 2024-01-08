@@ -8,3 +8,4 @@
 ## module2 - [Searching & Sorting Algorithms](https://github.com/shivakumaryevunja/Upgrade-campus-6521-Sept/blob/main/module/Searching%20%26%20Sorting%20Algorithms)
 # Data Structure
 ## module1 - [Stacks and Queues](https://github.com/shivakumaryevunja/Upgrade-campus-6521-Sept/blob/main/module/Stacks%20and%20Queues)
+## module2 - [HashTables, HashMaps and HashSets](https://github.com/shivakumaryevunja/Upgrade-campus-6521-Sept/blob/main/module/HashTables%2C%20HashMaps%20and%20HashSets)
