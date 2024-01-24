@@ -1,1 +1,21 @@
+1. Write a program to check whether the graph is tree or not
+ans: import java.util.Scanner;
+    public class Source {
+    	public static void main(String args[]) throws Exception{
+    		Scanner in = new Scanner(System.in);
+    		int n = in.nextInt();
+    		int sum = 0;
+    		for(int i=0;i<n;i++){
+    		    sum += in.nextInt();
+    		}
+    		if(sum == 2*(n-1)){
+    		    System.out.println("Yes");
+    		}else{
+    		    System.out.println("No");
+    		}
+    		
+    	}
+    }
 
+//in the above code we are checking using the theory if its tree then the sum of degrees should be
+  2*(n-1)  where n is no of vertex or node
